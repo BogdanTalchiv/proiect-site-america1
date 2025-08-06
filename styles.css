@@ -1154,3 +1154,49 @@ input:invalid, textarea:invalid, select:invalid {
         font-size: 1rem;
     }
 }
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #234567;
+    margin-left: auto;
+}
+
+@media (max-width: 800px) {
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #f6f8fa;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        padding: 0;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+        display: none;
+        z-index: 100;
+    }
+    .nav-links.show {
+        display: flex;
+    }
+    .nav-links li {
+        width: 100%;
+        border-bottom: 1px solid #e3eefd;
+    }
+    .nav-links li a {
+        padding: 18px 24px;
+        width: 100%;
+        display: block;
+        font-size: 1.1rem;
+    }
+    .hamburger {
+        display: block;
+    }
+    .nav-flex {
+        position: relative;
+    }
+    .social-icons {
+        display: none;
+    }
+}
