@@ -153,7 +153,3 @@ document.querySelectorAll('.faq-question').forEach(function(question) {
     window.addEventListener('load', animateOnScroll);
     window.addEventListener('scroll', animateOnScroll);
 });
-// Hamburger menu toggle
-document.getElementById('hamburger').addEventListener('click', function() {
-    document.getElementById('navLinks').classList.toggle('show');
-});
