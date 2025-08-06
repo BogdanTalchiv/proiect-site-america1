@@ -161,13 +161,10 @@ nav .container {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/illuminated-brooklyn-bridge.jpg') no-repeat center center/cover;
-    color: var(--white);
+    background: linear-gradient(rgba(34,69,103,0.6), rgba(255,255,255,0.1)), url('images/illuminated-brooklyn-bridge.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 60px 0;
     text-align: center;
-    padding: 100px 0;
-    min-height: 60vh;
-    display: flex;
-    align-items: center;
 }
 
 .hero h2 {
@@ -1106,17 +1103,54 @@ input:invalid, textarea:invalid, select:invalid {
 }
 
 .faq-answer {
-    padding: 0 28px 20px 28px;
-    color: #444;
-    background: #fff;
-    font-size: 1rem;
-    line-height: 1.6;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s cubic-bezier(.4,0,.2,1), padding 0.3s;
+    padding: 0 28px;
+    background: #fff;
+    color: #444;
 }
 
 .faq-item.active .faq-answer {
     max-height: 400px;
     padding: 16px 28px 20px 28px;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 400px;
+    padding: 16px 28px 20px 28px;
+}
+@media (max-width: 600px) {
+    .top-bar-flex {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+    .logo-area {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    .logo-img {
+        max-width: 140px;
+        height: auto;
+    }
+    .contact-area {
+        align-items: flex-start;
+        font-size: 1rem;
+        gap: 2px;
+    }
+}
+@media (max-width: 600px) {
+    .hero {
+        padding: 40px 0;
+        background-position: center top;
+        background-size: cover;
+    }
+    .hero h2 {
+        font-size: 1.3rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
 }
