@@ -1319,3 +1319,28 @@ body.dark-mode footer {
     background: #181c23 !important;
     color: #f6f8fa !important;
 }
+.back-to-top {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: #007bff;
+    color: #fff;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    z-index: 1200;
+}
+.back-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+.back-to-top:hover {
+    background: #234567;
+}
