@@ -333,7 +333,7 @@ nav .container {
 }
 
 .testimonials .container {
-    background-color: #c7c702; /* Schimbă cu orice culoare vrei, ex: #e0e0e0 sau red */
+    background-color: #9f9f9f; /* Schimbă cu orice culoare vrei, ex: #e0e0e0 sau red */
     border-radius: 12px;       /* Opțional: colțuri rotunjite */
     padding: 32px;             /* Opțional: spațiere internă */
 }
@@ -691,23 +691,18 @@ nav .container {
 
 /* FAQ Section */
 .faq-section {
-    padding: 80px 0;
-    background-color: var(--white);
+    background: #f6f8fa;
+    padding: 60px 0;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
 }
 
 .faq-section h2 {
     text-align: center;
-    margin-bottom: 50px;
-    position: relative;
-}
-
-.faq-section h2::after {
-    content: '';
-    display: block;
-    width: 80px;
-    height: 3px;
-    background-color: var(--primary-yellow);
-    margin: 15px auto;
+    color: #234567;
+    font-size: 2.2rem;
+    margin-bottom: 32px;
+    letter-spacing: 1px;
 }
 
 .faq-container {
@@ -716,73 +711,66 @@ nav .container {
 }
 
 .faq-item {
-    margin-bottom: 15px;
-    border: 1px solid #eee;
-    border-radius: 5px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-bottom: 18px;
     overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+.faq-item.active {
+    box-shadow: 0 6px 24px rgba(0,123,255,0.10);
 }
 
 .faq-question {
-    padding: 20px;
-    background-color: var(--light-gray);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     cursor: pointer;
-    transition: all 0.3s ease;
+    padding: 20px 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.15rem;
+    color: #234567;
+    background: #f0f4fa;
+    border: none;
+    font-weight: 600;
+    transition: background 0.3s, color 0.3s;
 }
 
-.faq-question:hover {
-    background-color: #e9ecef;
-}
-
-.faq-question h3 {
-    margin: 0;
-    font-size: 18px;
-    color: var(--primary-black);
+.faq-item.active .faq-question {
+    background: #e3eefd;
+    color: #007bff;
 }
 
 .faq-question i {
-    transition: transform 0.3s ease;
+    margin-left: 12px;
+    font-size: 1.2em;
+    transition: transform 0.3s;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+    color: #007bff;
 }
 
 .faq-answer {
-    padding: 0 20px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
-    background-color: var(--white);
+    transition: max-height 0.4s cubic-bezier(.4,0,.2,1), padding 0.3s;
+    padding: 0 28px;
+    background: #fff;
+    color: #444;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 400px;
+    padding: 16px 28px 20px 28px;
 }
 
 .faq-answer p {
     padding: 20px 0;
     margin: 0;
 }
-
-.faq-item.active .faq-question {
-    background-color: var(--primary-red);
-    color: white;
-}
-
-.faq-item.active .faq-question h3 {
-    color: white;
-.testimonials .container {
-    background-color: #c7c702; /* Change to any color you want, e.g.: #e0e0e0 or red */
-    border-radius: 12px;       /* Optional: rounded corners */
-    padding: 32px;             /* Optional: inner spacing */
-}
-}
-
-.faq-item.active .faq-answer {
-    max-height: 500px;
-    padding: 0 20px;
-}
-
-
-/* Testimonials Section */
-/* (This duplicate block has been merged above; you can safely remove this section) */
-
-
 
 /* Footer Styles */
 footer {
@@ -1165,12 +1153,12 @@ input:invalid, textarea:invalid, select:invalid {
 @media (max-width: 800px) {
     .nav-links {
         position: absolute;
-        top: 70px;
+        top: 60px;
         left: 0;
-        width: 100%;
+        width: 70vw;
         background: #f6f8fa;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: flex-end;
         gap: 0;
         padding: 0;
         box-shadow: 0 4px 24px rgba(0,0,0,0.07);
@@ -1199,4 +1187,135 @@ input:invalid, textarea:invalid, select:invalid {
     .social-icons {
         display: none;
     }
+}
+
+.estimate-bar {
+    width: 100%;
+    background: linear-gradient(90deg, #007bff 60%, #234567 100%);
+    padding: 12px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.estimate-btn {
+    color: #fff;
+    background: #ff9800;
+    padding: 10px 28px;
+    border-radius: 24px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: background 0.2s, color 0.2s;
+    display: inline-block;
+}
+
+.estimate-btn:hover {
+    background: #ffd700;
+    color: #234567;
+}
+.nav-flex {
+    display: flex;
+    justify-content: flex-end; /* aliniere la dreapta */
+    align-items: center;
+    gap: 24px;
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 800px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 70vw;
+        background: #f6f8fa;
+        flex-direction: column;
+        align-items: flex-end;
+        display: none;
+        box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+        z-index: 100;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+        margin-left: 16px;
+    }
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #234567;
+}
+.toggle-dark-btn {
+    position: fixed;
+    top: 18px;
+    right: 18px;
+    z-index: 1100;
+    background: #fff;
+    color: #234567;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: background 0.2s, color 0.2s;
+}
+.toggle-dark-btn.active, .dark-mode .toggle-dark-btn {
+    background: #222;
+    color: #ffd700;
+}
+body.dark-mode {
+    background: #181c23;
+    color: #f6f8fa;
+}
+body.dark-mode .container,
+body.dark-mode .faq-section,
+body.dark-mode .testimonials .container,
+body.dark-mode .service-card,
+body.dark-mode .category,
+body.dark-mode .footer-grid,
+body.dark-mode .about-content,
+body.dark-mode .contact-container {
+    background: #232a34 !important;
+    color: #f6f8fa !important;
+}
+body.dark-mode .faq-question,
+body.dark-mode .faq-item.active .faq-question {
+    background: #232a34 !important;
+    color: #ffd700 !important;
+}
+body.dark-mode .faq-answer {
+    background: #232a34 !important;
+    color: #f6f8fa !important;
+}
+body.dark-mode .estimate-bar {
+    background: linear-gradient(90deg, #232a34 60%, #181c23 100%) !important;
+}
+body.dark-mode .btn,
+body.dark-mode .estimate-btn {
+    background: #ffd700 !important;
+    color: #232a34 !important;
+}
+body.dark-mode .nav-links,
+body.dark-mode .nav-links.active {
+    background: #232a34 !important;
+}
+body.dark-mode footer {
+    background: #181c23 !important;
+    color: #f6f8fa !important;
 }
