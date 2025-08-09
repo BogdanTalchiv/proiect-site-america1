@@ -174,6 +174,40 @@ window.addEventListener('scroll', function() {
         backToTopBtn.classList.remove('show');
     }
 });
-backToTopBtn.addEventListener('click', function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-});
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Funcția pentru butoanele next/previous
+function changeSlide(n) {
+    showSlides(slideIndex += n);
+}
+
+// Funcția pentru punctele de navigare
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    const slides = document.getElementsByClassName("slide");
+    const dots = document.getElementsByClassName("dot");
+    
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active-dot", "");
+    }
+    
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active-dot";
+}
+
+// Schimbă automat slide-urile la fiecare 5 secunde
+setInterval(function() {
+    changeSlide(1);
+}, 5000);
