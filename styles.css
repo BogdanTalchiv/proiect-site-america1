@@ -1422,3 +1422,12 @@ body.dark-mode footer {
     from {opacity: .4} 
     to {opacity: 1}
 }
+.contact-area span, 
+.contact-area a {
+    color: #FFD700 !important; /* galben */
+    text-decoration: none !important;
+}
+
+.contact-area a:hover {
+    text-decoration: underline !important;
+}
