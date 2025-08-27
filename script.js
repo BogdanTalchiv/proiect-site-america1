@@ -156,15 +156,6 @@ document.querySelectorAll('.faq-question').forEach(function(question) {
 document.getElementById('hamburger').addEventListener('click', function() {
     document.getElementById('navLinks').classList.toggle('active');
 });
-// Dark/Light mode toggle
-document.getElementById('toggle-dark').addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    this.classList.toggle('active');
-    // Schimbă iconița
-    this.innerHTML = document.body.classList.contains('dark-mode')
-        ? '<i class="fas fa-sun"></i>'
-        : '<i class="fas fa-moon"></i>';
-});
 // Back to Top button
 const backToTopBtn = document.getElementById('backToTop');
 window.addEventListener('scroll', function() {

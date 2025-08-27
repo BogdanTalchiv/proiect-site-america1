@@ -934,7 +934,7 @@ input:invalid, textarea:invalid, select:invalid {
 }
 
 .social-icons a:hover {
-    color: #007bff;      /* culoare la hover */
+    color: #307ed1;      /* culoare la hover */
 }
 
 .top-bar-flex {
@@ -987,7 +987,7 @@ input:invalid, textarea:invalid, select:invalid {
 }
 
 .nav-links li a:hover {
-    color: #007bff;
+    color: #0080ff;
 }
 
 .social-icons {
@@ -1003,7 +1003,7 @@ input:invalid, textarea:invalid, select:invalid {
 }
 
 .social-icons a:hover {
-    color: #007bff;
+    color: #0080ff;
 }
 
 .nav-links li a {
@@ -1191,7 +1191,7 @@ input:invalid, textarea:invalid, select:invalid {
 
 .estimate-bar {
     width: 100%;
-    background: linear-gradient(90deg, #007bff 60%, #234567 100%);
+    background: linear-gradient(90deg, #000000 60%, #4b7eb2 100%);
     padding: 12px 0;
     text-align: center;
     position: sticky;
@@ -1200,7 +1200,7 @@ input:invalid, textarea:invalid, select:invalid {
 }
 
 .estimate-btn {
-    color: #fff;
+    color: #fdfdfd;
     background: #ff9800;
     padding: 10px 28px;
     border-radius: 24px;
@@ -1259,66 +1259,7 @@ input:invalid, textarea:invalid, select:invalid {
     font-size: 2rem;
     color: #234567;
 }
-.toggle-dark-btn {
-    position: fixed;
-    top: 18px;
-    right: 18px;
-    z-index: 1100;
-    background: #fff;
-    color: #234567;
-    border: none;
-    border-radius: 50%;
-    width: 44px;
-    height: 44px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-    cursor: pointer;
-    font-size: 1.4rem;
-    transition: background 0.2s, color 0.2s;
-}
-.toggle-dark-btn.active, .dark-mode .toggle-dark-btn {
-    background: #222;
-    color: #ffd700;
-}
-body.dark-mode {
-    background: #181c23;
-    color: #f6f8fa;
-}
-body.dark-mode .container,
-body.dark-mode .faq-section,
-body.dark-mode .testimonials .container,
-body.dark-mode .service-card,
-body.dark-mode .category,
-body.dark-mode .footer-grid,
-body.dark-mode .about-content,
-body.dark-mode .contact-container {
-    background: #232a34 !important;
-    color: #f6f8fa !important;
-}
-body.dark-mode .faq-question,
-body.dark-mode .faq-item.active .faq-question {
-    background: #232a34 !important;
-    color: #ffd700 !important;
-}
-body.dark-mode .faq-answer {
-    background: #232a34 !important;
-    color: #f6f8fa !important;
-}
-body.dark-mode .estimate-bar {
-    background: linear-gradient(90deg, #232a34 60%, #181c23 100%) !important;
-}
-body.dark-mode .btn,
-body.dark-mode .estimate-btn {
-    background: #ffd700 !important;
-    color: #232a34 !important;
-}
-body.dark-mode .nav-links,
-body.dark-mode .nav-links.active {
-    background: #232a34 !important;
-}
-body.dark-mode footer {
-    background: #181c23 !important;
-    color: #f6f8fa !important;
-}
+
 .back-to-top {
     position: fixed;
     bottom: 32px;
